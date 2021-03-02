@@ -1,0 +1,30 @@
+//get data from url
+const params = new URLSearchParams(window.location.search);
+
+// get elemts to change
+const blogPost = document.getElementById("dance");
+
+if (params.has("blogID")) {
+  fetch(`http://127.0.0.1:5000/show-blog-item/${params.get("blogID")}`)
+    .then((response) => response.json())
+    .then((blog) => {
+      console.log(blog);
+      blogPost.innerHTML = `
+
+      
+      <h1 class="b-title">${blog.title} </h1>
+           <iframe class="video" width="760" height="315" src="${blog.video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+     <p class="b-para">${blog.description}</p>
+      <h2 class="b-head">${blog.header}</h2>
+      <p class="b-body">${blog.body1}</p>
+      <p class="b-body">${blog.body2}</p>
+      <p class="b-body">${blog.body3}</p>
+      <p class="b-body">${blog.body4}</p>
+      <p class="b-body">${blog.body5}</p>
+      
+      `;
+    });
+} else {
+  window.location.href = "./404.html";
+}

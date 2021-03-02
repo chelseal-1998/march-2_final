@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#dance {
+  /* height: 100vh; */
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: center;
+}
+
+.image {
+  width: 250px;
+  height: 250px;
+}
+
+.b-title {
+  margin: 70px;
+  text-align: center;
+}
+
+.b-para {
+  margin: 20px 50px;
+  border: 1px solid;
+  padding: 10px;
+}
+
+.b-body {
+  margin: auto 50px;
+  text-align: left;
+  padding: 10px;
+}
+
+.video {
+  padding: 0px;
+}
+
+.b-head {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.all {
+  display: flex;
+  flex-wrap: wrap;
+}
